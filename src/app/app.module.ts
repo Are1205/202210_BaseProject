@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BandasModule } from './bandas/bandas.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { BandasModule } from './bandas/bandas.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BandasModule
+    BandasModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -35,7 +35,7 @@ export class BandaListComponent implements OnInit {
       suma += this.bandas[i].numberOfMembers;
     }
     promedio = suma/contador;
-    return 'Average Number Of Memebers (Rounded up) ' + promedio.toPrecision(0);
+    return 'Average Number Of Memebers (Rounded up) ' + promedio;
   }
 
   ngOnInit() {

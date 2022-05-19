@@ -8,17 +8,14 @@ import { BandaService } from '../banda.service';
   styleUrls: ['./banda-detail.component.css']
 })
 export class BandaDetailComponent implements OnInit {
-  bandaId!:string;
+  bandaId!:number;
   @Input() bandaDetail!:Banda
   constructor(
     private bandaService: BandaService
   ) { }
 
-  getBanda():void{
-    this.bandaService.getBanda(this.bandaId).subscribe(banda=>{
-      this.bandaDetail = banda;
-    })
-
+  getBanda(banda:Banda):void{
+    this.bandaDetail = banda;
   }
 
   ngOnInit() {
