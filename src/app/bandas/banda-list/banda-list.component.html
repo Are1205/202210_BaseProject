@@ -1,0 +1,43 @@
+<div class="card">
+  <img
+  class="card-header-img"
+  src="https://raw.githubusercontent.com/Uniandes-isis2603/recursos-isis2603/master/images/p2_v2/sodastereo.jpg"
+  />
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-6">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Number Of Memebers</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let b of bandas">
+                  <td>
+                    <dd>{{b.id}}</dd>
+                  </td>
+                  <td>
+                    <dd (click)="onSelectedBanda(b)">{{b.name}}</dd>
+                  </td>
+                  <td>
+                    <dd>{{b.numberOfMembers}}</dd>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+          <div class="row justify-content-end">
+            <p class="col-4" id = "promedio">{{getPromedioMiemebros()}} </p>
+        </div>
+      </div>
+      <div class="col-6" *ngIf="selected">
+        <app-banda-detail>
+
+        </app-banda-detail>
+      </div>
+  </div>
+</div>
